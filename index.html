@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATOM — art2meta</title>
+<meta name="description" content="ATOM은 art2meta의 실험실입니다. 사줍티, Lowdown, Metaverse Bridge.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -278,6 +279,102 @@
     font-weight:400;
   }
 
+
+  /* Lowdown 카드 */
+  .card-lowdown{
+    background:#26213F;
+    color:var(--cream);
+  }
+  .card-lowdown .card-num{ color:var(--purple); opacity:1; }
+  .card-lowdown .card-title{
+    font-family:'Syne', sans-serif;
+    font-weight:700;
+    font-size:clamp(36px, 5vw, 52px);
+    line-height:1.05;
+    margin:24px 0 16px;
+    letter-spacing:-.01em;
+  }
+  .card-lowdown .card-desc{
+    font-size:14px;
+    line-height:1.9;
+    opacity:.7;
+    font-weight:300;
+    max-width:460px;
+    word-break:keep-all;
+  }
+  .card-lowdown .tag{ border-color:rgba(251,246,236,.25); }
+  .card-links{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-top:28px;
+  }
+  .card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:500;
+    text-decoration:none;
+    color:var(--neon);
+  }
+  .card-link:hover{ text-decoration:underline; text-underline-offset:4px; }
+
+  /* Metaverse Bridge 카드 */
+  .card-bridge{
+    background:var(--mint-deep);
+    color:var(--ink);
+  }
+  .card-bridge .card-num{ color:var(--ink); opacity:.55; }
+  .card-bridge .card-title{
+    font-family:'Syne', sans-serif;
+    font-weight:700;
+    font-size:clamp(32px, 4.4vw, 48px);
+    line-height:1.05;
+    margin:24px 0 16px;
+    letter-spacing:-.01em;
+  }
+  .card-bridge .card-desc{
+    word-break:keep-all;
+    font-size:14px;
+    line-height:1.9;
+    opacity:.75;
+    font-weight:400;
+    max-width:460px;
+  }
+  .bridge-list{
+    list-style:none;
+    margin-top:24px;
+    border-top:1px solid rgba(27,27,42,.18);
+  }
+  .bridge-list li{
+    word-break:keep-all;
+    padding:14px 0;
+    border-bottom:1px solid rgba(27,27,42,.18);
+    font-size:13px;
+    line-height:1.7;
+    font-weight:400;
+  }
+  .bridge-list b{
+    font-family:'Syne', sans-serif;
+    font-weight:700;
+    letter-spacing:.02em;
+    margin-right:8px;
+  }
+  .bridge-list a{
+    color:var(--ink);
+    text-underline-offset:3px;
+  }
+  .bridge-list a:hover{ color:var(--purple); }
+  .bridge-list code{
+    font-size:12px;
+    background:rgba(27,27,42,.08);
+    padding:2px 8px;
+    border-radius:6px;
+  }
+
   /* 탐미 카드 */
   .card-tammi{
     background:repeating-linear-gradient(135deg, var(--mint) 0px, var(--mint) 14px, var(--mint-deep) 14px, var(--mint-deep) 28px);
@@ -527,6 +624,48 @@
       </div>
     </div>
 
+
+    <div class="card card-lowdown">
+      <div class="card-num">P.003</div>
+      <div>
+        <div class="card-title">Lowdown</div>
+        <p class="card-desc">
+          MCP Registry가 선언한 것과 실제로 관측되는 것의 차이를 매일 기록합니다.<br>
+          점수도 순위도 매기지 않고, 무엇이 언제 바뀌었는지만 남깁니다.<br>
+          2026년 10월 6일부터 같은 2,000개 항목을 매일 관측하고 있습니다.
+        </p>
+      </div>
+      <div>
+        <div class="card-tags">
+          <span class="tag">MCP</span>
+          <span class="tag">AI 에이전트</span>
+          <span class="tag">공개 데이터</span>
+          <span class="tag">CC BY 4.0</span>
+        </div>
+        <div class="card-links">
+          <a class="card-link" href="https://github.com/PetShopBros/lowdown-data" target="_blank" rel="noopener">일일 리포트·데이터 <span class="arrow">→</span></a>
+          <a class="card-link" href="https://github.com/PetShopBros/lowdown-proxy" target="_blank" rel="noopener">코드 <span class="arrow">→</span></a>
+          <a class="card-link" href="https://huggingface.co/datasets/art2meta/lowdown-mcp-observations" target="_blank" rel="noopener">Hugging Face <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-bridge">
+      <div class="card-num">P.004</div>
+      <div>
+        <div class="card-title">Metaverse Bridge</div>
+        <p class="card-desc">
+          AI 에이전트에게 Decentraland 안의 몸을 주는 프로젝트.<br>
+          에이전트가 세계에 들어가 관찰하고, 있었던 일을 기록할 수 있게 하는 도구를 만들고 있습니다.
+        </p>
+        <ul class="bridge-list">
+          <li><b>Remy</b>46,115 땅에 사는 AI 에이전트 펫. 땅 안을 돌아다니며 파셀을 탐험하고, 행동은 Lowdown에 기록됩니다. Explorer 채팅창에 <code>/goto 46,115</code></li>
+          <li><b>World Scanner</b>Genesis City 약 90,600개 파셀을 12시간마다 확인해 씬의 생성·변경·삭제를 추적하는 지도. <a href="https://remy-dcl-relay-roan.vercel.app/scanner.html" target="_blank" rel="noopener">열기 →</a></li>
+          <li><b>dcl-agent-mcp</b>AI 에이전트가 MCP로 Decentraland에 입장하고 씬을 관찰하며 방문을 기록하게 해주는 오픈 MCP 서버. <a href="https://www.npmjs.com/package/dcl-agent-mcp" target="_blank" rel="noopener">npm →</a> <a href="https://github.com/PetShopBros/dcl-agent-mcp" target="_blank" rel="noopener">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -535,9 +674,11 @@
     <div class="about-label">About ATOM</div>
     <div class="about-text">
       ATOM은 <strong>art2meta</strong>의 실험실입니다.
-      손에 잡히지 않는 것들 — 성격, 운, 관계 — 을 캐릭터와 이야기로 번역합니다.
-      사줍티는 사주와 MBTI로 사람을 읽고, tammi는 성격을 탐구합니다.
-      분석이 아니라 이야기로, 데이터가 아니라 캐릭터로.
+      손에 잡히지 않는 것들 — 성격, 운, 관계 — 을 캐릭터와 이야기로 번역하고,
+      이제는 AI 에이전트가 세계를 관찰하고 기록하는 방식까지 만듭니다.
+      사줍티는 사주와 MBTI로 사람을 읽고, tammi는 성격을 탐구하며,
+      Lowdown과 Metaverse Bridge는 에이전트가 남긴 기록을 모읍니다.
+      사람에게는 이야기로, 에이전트에게는 기록으로.
     </div>
   </div>
 </section>
@@ -550,6 +691,8 @@
         <h4>Products</h4>
         <a href="https://sajubti.art2meta.com" target="_blank">사줍티 — SAJU × MBTI</a>
         <span>tammi (출시 예정)</span>
+        <a href="https://github.com/PetShopBros/lowdown-data" target="_blank" rel="noopener">Lowdown — MCP 관측 기록</a>
+        <a href="https://github.com/PetShopBros/dcl-agent-mcp" target="_blank" rel="noopener">Metaverse Bridge — Decentraland × AI</a>
       </div>
       <div class="footer-col">
         <h4>Brand</h4>
